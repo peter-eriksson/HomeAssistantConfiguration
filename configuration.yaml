@@ -1,0 +1,86 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: !secret elevation
+  unit_system: metric
+  time_zone: Europe/Stockholm
+  customize_glob: !include customglob.yaml
+  packages: !include_dir_named packages
+
+# Enables configuration UI
+config:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  # api_password: PASSWORD
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# ########################################
+# ###                GUI               ###
+# ########################################
+
+frontend:
+#map:
+
+# ########################################
+# ###              LOGGING             ###
+# ########################################
+
+# Enables support for tracking state changes over time.
+history:
+# View all events in a logbook
+logbook:
+# Track the sun
+sun:
+
+########################################
+###               HUBS               ###
+########################################
+
+tellstick:
+zwave:
+  usb_path: /dev/zwave
+
+# Text to speech
+#tts:
+#  platform: google
+
+sensor: !include_dir_merge_list sensor
+light: !include_dir_merge_list lights
+switch: !include_dir_merge_list switch
+scene: !include_dir_merge_list scene
+#group: !include groups.yaml
+#automation: !include automations.yaml
+#device_tracker: !include device_tracker.yaml
+#zone:
+#  - name: Carola School
+#    latitude: !secret school_lat
+#    longitude: !secret school_long
+#    icon: mdi:code-braces
+#  - name: Peter Work
+#    latitude: !secret work_lat
+#    longitude: !secret work_long
+#    icon: mdi:briefcase
+#    radius: 300
+
+# ########################################
+# ###             SERVICES             ###
+# ########################################
+automation: !include_dir_merge_list automation
+#notify: !include notify.yaml
+#python_script:
+#script: !include scripts.yaml
+group: !include_dir_merge_named group/

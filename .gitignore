@@ -1,0 +1,14 @@
+*
+!*.yaml
+!scenes
+!automation
+!customize
+!group
+!lights
+!packages
+!scene
+!sensor
+!switch
+!.gitignore
+secrets.yaml
+known_devices.yaml

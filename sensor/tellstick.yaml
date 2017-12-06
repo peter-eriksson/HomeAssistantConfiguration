@@ -1,0 +1,12 @@
+  - platform: tellstick
+    165: Utomhus
+    114: Krypgrund
+    only_named: True
+    temperature_scale: "°C"
+    datatype_mask: 3
+  - platform: tellstick
+    194: Frys
+    196: Kyl
+    only_named: True
+    temperature_scale: "°C"
+    datatype_mask: 1

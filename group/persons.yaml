@@ -1,0 +1,5 @@
+persons:
+  view: no
+  entities:
+    - device_tracker.peter
+#    - device_tracker.carola

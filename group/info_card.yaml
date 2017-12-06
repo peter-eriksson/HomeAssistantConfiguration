@@ -1,0 +1,5 @@
+info_card:
+  name: Info
+  control: hidden
+  entities:
+    - sun.sun
