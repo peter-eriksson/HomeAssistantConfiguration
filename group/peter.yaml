@@ -1,7 +1,7 @@
-isabella:
+peter:
   name: Peter
   entities:
-    - device_tracker.peters_galaxy_s7
+    - device_tracker.petergalaxys7lan
     # - device_tracker.isabellas_iphone_6s_wifi
     # - device_tracker.isabellas_iphone_6s_bt
     # - device_tracker.isa_computer
