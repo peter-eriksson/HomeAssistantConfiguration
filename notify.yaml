@@ -1,6 +1,6 @@
-#  - name: Pushbullet Peter
-#    platform: pushbullet
-#    api_key: !secret pushbullet_key
+  - name: Pushbullet Peter
+    platform: pushbullet
+    api_key: !secret pushbullet_key_peter
 #  - name: Pushbullet Carola
 #    platform: pushbullet
 #    api_key: !secret stefan_pushbullet_key
