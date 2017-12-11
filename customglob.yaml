@@ -1,5 +1,5 @@
 "*.*":
-  custom_ui_state_card: state-card-custom-ui
+#  custom_ui_state_card: state-card-custom-ui
   show_last_changed: true
 
 light.*:
@@ -7,7 +7,7 @@ light.*:
   stretch_slider: true
   slider_theme:
     pin: true
-  homebridge_visible: true
+#  homebridge_visible: true
 
 
 "sensor.*_exporting*":
