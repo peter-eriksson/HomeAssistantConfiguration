@@ -1,14 +1,12 @@
-system_monitor_card:
-  name: System Monitor Hass Rpi
+temp_and_light_card:
+  name: Temperature and light
   entities:
-    - alert.disk_use_critical
-    - sensor.uptime
-    - sensor.ha_uptime
-    # - binary_sensor.critical_disk_use
-    - sensor.disk_used__2
-    - sensor.disk_used_
-    - sensor.last_boot
-    - sensor.since_last_boot
-#    - sensor.ssl_cert_expiry
-#    - sensor.process_homebridge
-#    - sensor.process_mosquitto
+    - sensor.frys_temperature
+    - sensor.kyl_temperature
+    - sensor.utomhus_temperature
+    - sensor.utomhus_humidity
+    - sensor.krypgrund_temperature
+    - sensor.krypgrund_humidity
+    - sensor.vardagsrum_multisensor_temperature
+    - sensor.vardagsrum_multisensor_relative_humidity
+    - sensor.vardagsrum_multisensor_luminance
