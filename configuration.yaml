@@ -79,7 +79,8 @@ logbook:
 sun:
 
 recorder:
-  purge_days: 2
+  purge_interval: 2
+  purge_keep_days: 5
 
 ########################################
 ###               HUBS               ###
