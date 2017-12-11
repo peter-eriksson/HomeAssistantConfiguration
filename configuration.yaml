@@ -5,6 +5,17 @@ homeassistant:
   elevation: !secret elevation
   unit_system: metric
   time_zone: Europe/Stockholm
+  customize:
+    group.all_automations:
+      hidden: false
+    group.all_scripts:
+      hidden: false
+    group.all_devices:
+      hidden: false
+    group.all_lights:
+      hidden: false
+    group.all_switches:
+      hidden: false
 #  customize_glob: !include customglob.yaml
 #  packages: !include_dir_named packages
 
@@ -82,15 +93,3 @@ switch: !include_dir_merge_list switch
 #python_script:
 #script: !include scripts.yaml
 group: !include_dir_merge_named group/
-
-customize:
-  group.all_automations:
-    hidden: false
-  group.all_scripts:
-    hidden: false
-  group.all_devices:
-    hidden: false
-  group.all_lights:
-    hidden: false
-  group.all_switches:
-    hidden: false
