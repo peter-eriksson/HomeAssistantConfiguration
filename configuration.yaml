@@ -31,11 +31,11 @@ homeassistant:
     sensor.ha_uptime:
       friendly_name: 'Hass Up Since'
       icon: mdi:timetable
-    input_boolean.notify_peter:
-      icon: mdi:message-bulleted
-      confirm_controls_show_lock: true
-    input_text.peter_notify_text:
-      icon: mdi:message-bulleted
+#    input_boolean.notify_peter:
+#      icon: mdi:message-bulleted
+#      confirm_controls_show_lock: true
+#    input_text.peter_notify_text:
+#      icon: mdi:message-bulleted
 
 
 
