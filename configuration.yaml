@@ -37,8 +37,6 @@ homeassistant:
 #    input_text.peter_notify_text:
 #      icon: mdi:message-bulleted
 
-
-
 #  customize_glob: !include customglob.yaml
 #  packages: !include_dir_named packages
 
@@ -79,6 +77,9 @@ history:
 logbook:
 # Track the sun
 sun:
+
+recorder:
+  purge_days: 2
 
 ########################################
 ###               HUBS               ###
