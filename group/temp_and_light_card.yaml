@@ -1,0 +1,12 @@
+temp_and_light_card:
+  name: Temperature and light conditions
+  entities:
+    - sensor.frys_temperature
+    - sensor.krypgrund_humidity
+    - sensor.krypgrund_temperature
+    - sensor.kyl_temperature
+    - sensor.utomhus_humidity
+    - sensor.utomhus_temperature
+    - sensor.vardagsrum_multisensor_temperature
+    - sensor.vardagsrum_multisensor_relative_humidity
+    - sensor.vardagsrum_multisensor_luminance
