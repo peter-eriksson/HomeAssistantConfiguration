@@ -1,0 +1,113 @@
+homeassistant:
+  customize:
+    sensor.disk_used_:
+      friendly_name: Rpi Disk Used
+#    sensor.process_mosquitto:
+#      friendly_name: 'Mosquitto'
+#      hidden: False
+#      icon: mdi:message-processing
+#    sensor.process_homebridge:
+#      friendly_name: 'Apple HomeKit'
+#      hidden: False
+#      icon: mdi:apple
+    sensor.uptime:
+      friendly_name: 'Hass Uptime'
+    sensor.ha_uptime:
+      friendly_name: 'Hass Up Since'
+      icon: mdi:timetable
+    
+
+system_monitor_card:
+  name: System Monitor Hass Rpi
+  entities:
+    - alert.disk_use_critical
+    - sensor.uptime
+    - sensor.ha_uptime
+    # - binary_sensor.critical_disk_use
+    - sensor.disk_use__2
+    - sensor.disk_use_
+    - sensor.disk_free_
+    - sensor.last_boot
+    - sensor.since_last_boot
+#    - sensor.ssl_cert_expiry
+#    - sensor.process_homebridge
+#    - sensor.process_mosquitto
+
+sensor:
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /
+      - type: disk_use
+        arg: /
+      - type: disk_free
+        arg: /
+      - type: last_boot
+      - type: since_last_boot
+#      - type: process
+#        arg: mosquitto
+
+  - platform: uptime
+    unit_of_measurement: hours
+
+  - platform: command_line
+    name: "HA Uptime"
+    command: echo "$(($(date +%s) - $(date -d "$(head -n1 /home/homeassistant/.homeassistant/home-assistant.log | cut -d' ' -f-2)" +%s)))"
+    scan_interval: 360
+    value_template: >-
+      {% set uptime = value | int %}
+      {% set seconds = uptime % 60 %}
+      {% set minutes = ((uptime % 3600) / 60) | int %}
+      {% set hours = ((uptime % 86400) / 3600) | int %}
+      {% set days = (uptime / 86400) | int %}
+      {%- if days > 0 -%}
+        {%- if days == 1 -%}
+          1 day
+        {%- else -%}
+          {{ days }} days
+        {%- endif -%}
+        {{ ', ' }}
+      {%- endif -%}
+      {{ '%02d' % hours }}:{{ '%02d' % minutes }}
+
+#history_graph:
+#  internet_speed_tests:
+#    name: Internet Speed Tests
+#    entities:
+#      - sensor.speedtest_download
+#      - sensor.speedtest_ping
+#      - sensor.speedtest_upload
+
+#binary_sensor:
+#  - platform: template
+#    sensors:
+#      critical_disk_use:
+#        value_template: '{{ states.sensor.disk_used_|float > 70 }}'
+#        friendly_name: 'Critical Disk Use'
+
+#alert:
+#  disk_use_critical:
+#    name: Rpi Disk Use Is Critical
+#    entity_id: binary_sensor.critical_disk_use
+#    repeat: 30
+#    skip_first: False
+#    notifiers:
+#      - ios_isabellas_iphone_6s
+
+#automation:
+#  - alias: 'Process Status'
+#    hide_entity: True
+#    trigger:
+#         - platform: state
+#           entity_id:
+#             - sensor.process_mosquitto
+#             - sensor.process_homebridge
+#           to: 'off'
+#           for:
+#             minutes: 1
+#    action:
+#      - service: notify.ios_isabellas_iphone_6s
+#        data_template:
+#          title: 'Process status'
+#          message: >
+#            '{{ trigger.to_state.attributes.friendly_name }} is {{ trigger.to_state.state }}'

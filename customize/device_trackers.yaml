@@ -1,6 +1,6 @@
     device_tracker.peter:
       icon: mdi:cellphone-iphone
-      homebridge_visible: true
+#      homebridge_visible: true
 #    device_tracker.isabellas_iphone_6s_wifi:
 #      icon: mdi:cellphone-iphone
 #    device_tracker.isabellas_iphone_6s_bt:

@@ -5,40 +5,9 @@ homeassistant:
   elevation: !secret elevation
   unit_system: metric
   time_zone: Europe/Stockholm
-  customize:
-    group.all_automations:
-      hidden: false
-    group.all_scripts:
-      hidden: false
-    group.all_devices:
-      hidden: false
-    group.all_lights:
-      hidden: false
-    group.all_switches:
-      hidden: false
-    sensor.disk_used_:
-      friendly_name: Rpi Disk Used
-#    sensor.process_mosquitto:
-#      friendly_name: 'Mosquitto'
-#      hidden: False
-#      icon: mdi:message-processing
-#    sensor.process_homebridge:
-#      friendly_name: 'Apple HomeKit'
-#      hidden: False
-#      icon: mdi:apple
-    sensor.uptime:
-      friendly_name: 'Hass Uptime'
-    sensor.ha_uptime:
-      friendly_name: 'Hass Up Since'
-      icon: mdi:timetable
-    input_boolean.notify_peter:
-      icon: mdi:message-bulleted
-      confirm_controls_show_lock: true
-    input_text.peter_notify_text:
-      icon: mdi:message-bulleted
-
-#  customize_glob: !include customglob.yaml
-#  packages: !include_dir_named packages
+  customize: !include_dir_merge_named customize
+  packages: !include_dir_named packages
+  # customize_glob: !include customglob.yaml
 
 # Enables configuration UI
 config:
@@ -119,28 +88,3 @@ notify: !include notify.yaml
 #script: !include scripts.yaml
 group: !include_dir_merge_named group/
 
-
-automation:
-  - alias: Notify Peter
-    initial_state: 'on'
-    trigger:
-      platform: state
-      entity_id: input_boolean.notify_peter
-      to: 'on'
-    action:
-      - service: notify.pushbullet_peter
-        data:
-          message: ''
-          title: '{{ states.input_text.peter_notify_text.state }}'
-      - service: homeassistant.turn_off
-        entity_id: input_boolean.notify_peter
-
-input_boolean:
-  notify_peter:
-    name: Send
-    initial: 'off'
-
-input_text:
-  peter_notify_text:
-    name: Peter Notify Text
-    initial: Fem minuter till mat
