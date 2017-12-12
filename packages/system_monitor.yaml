@@ -24,8 +24,8 @@ group:
       - sensor.uptime
       - sensor.ha_uptime
       # - binary_sensor.critical_disk_use
-      - sensor.disk_use__2
-      - sensor.disk_use_
+      - sensor.disk_used__2
+      - sensor.disk_used_
       - sensor.disk_free_
       - sensor.last_boot
       - sensor.since_last_boot

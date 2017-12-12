@@ -82,7 +82,7 @@ device_tracker: !include device_tracker.yaml
 # ########################################
 # ###             SERVICES             ###
 # ########################################
-#automation: !include_dir_merge_list automation
+automation: !include_dir_merge_list automation
 notify: !include notify.yaml
 #python_script:
 #script: !include scripts.yaml
