@@ -1,0 +1,24 @@
+#########################################
+######         MEDIA PLAYERS       ######
+#########################################
+#    media_player.shield:
+#      friendly_name: Chromecast Shield
+#      homebridge_visible: true
+    media_player.vardagsrum:
+      friendly_name: Chromecast vardagsrums
+#      homebridge_visible: true
+#    media_player.sonos:
+#      homebridge_visible: true
+#    media_player.sovrum:
+#      friendly_name: Hemmabiosystem
+#      homebridge_visible: true
+    media_player.sovrum:
+      friendly_name: Chromecast sovrum
+#      homebridge_visible: true
+#    media_player._samsung_5_series_49_ue49k5505:
+#      friendly_name: Sovrumstv
+#      homebridge_visible: true
+#    media_player.shield_2:
+#      friendly_name: Plex Shield
+#      icon: mdi:plex
+#      homebridge_visible: true

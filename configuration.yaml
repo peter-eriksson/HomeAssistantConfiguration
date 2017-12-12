@@ -63,6 +63,7 @@ zwave:
 #tts:
 #  platform: google
 
+media_player: !include media_player.yaml
 sensor: !include_dir_merge_list sensor
 #light: !include_dir_merge_list lights
 switch: !include_dir_merge_list switch
