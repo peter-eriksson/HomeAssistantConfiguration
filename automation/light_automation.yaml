@@ -1,8 +1,25 @@
-- alias: 'Morning lights in living room'
+- alias: 'Morning lights'
   trigger:
     - platform: time
       at: "07:00:00"
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.vardagsrum
 
+- alias: 'No lights at day'
+  trigger:
+    - platform: time
+      at: "08:30:00"
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.vardagsrum
+
+- alias: 'Evening lights'
+  trigger:
+    - platform: time
+      at: "16:30:00"
   action:
     - service: switch.turn_on
       data:
