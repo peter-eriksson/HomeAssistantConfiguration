@@ -1,0 +1,9 @@
+- alias: 'Morning lights in living room'
+  trigger:
+    - platform: time
+      at: "21:20:00"
+
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.vardagsrum
