@@ -11,6 +11,14 @@
   trigger:
     - platform: time
       at: "08:30:00"
+  condition:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
   action:
     - service: switch.turn_off
       data:
