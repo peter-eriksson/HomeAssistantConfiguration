@@ -1,7 +1,7 @@
 - alias: 'Morning lights'
   trigger:
     - platform: time
-      at: "07:00:00"
+      at: "08:00:00"
   action:
     - service: switch.turn_on
       data:
@@ -19,6 +19,9 @@
         - wed
         - thu
         - fri
+    - condition: state
+      entity_id: device_tracker.petergalaxys7lan
+      state: 'not_home'
   action:
     - service: switch.turn_off
       data:
@@ -32,3 +35,21 @@
     - service: switch.turn_on
       data:
         entity_id: switch.vardagsrum
+
+- alias: 'Outside back lights on'
+  trigger:
+    - platform: time
+      at: "17:00:00"
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.lampor_baksidan
+
+- alias: 'Outside back lights off'
+  trigger:
+    - platform: time
+      at: "23:30:00"
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.lampor_baksidan

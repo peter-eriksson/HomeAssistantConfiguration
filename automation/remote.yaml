@@ -1,0 +1,10 @@
+- alias: 'Turn off with remote'
+  trigger:
+    platform: state
+    entity_id: switch.remote1
+    to: 'off'
+  action:
+      - delay: 0:10
+      - service: switch.turn_off
+        data:
+          entity_id: switch.vardagsrum
