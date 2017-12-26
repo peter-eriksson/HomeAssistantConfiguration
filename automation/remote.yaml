@@ -4,7 +4,8 @@
     entity_id: switch.remote1
     to: 'off'
   action:
-      - delay: 0:10
+      - delay:
+        seconds: 15
       - service: switch.turn_off
         data:
           entity_id: switch.vardagsrum
