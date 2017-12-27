@@ -4,3 +4,4 @@ info_card:
   entities:
     - sun.sun
     - input_boolean.peter_home
+    - sensor.peter_home_sensor

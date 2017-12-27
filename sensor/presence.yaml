@@ -1,0 +1,7 @@
+  - platform: template
+    sensors:
+      peter_home_sensor:
+        friendly_name: Peter är hemma
+        value_template: "{{ states.input_boolean.peter_home.state == 'on' }}"
+        entity_id: input_boolean.peter_home
+#        device_class: occupancy
