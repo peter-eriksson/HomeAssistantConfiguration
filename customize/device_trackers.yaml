@@ -1,5 +1,8 @@
     device_tracker.petergalaxys7:
       icon: mdi:cellphone-iphone
+    input_boolean.peter_home:
+      icon: mdi:cellphone-iphone
+      friendly_name: Peter hemma
 #      homebridge_visible: true
 #    device_tracker.isabellas_iphone_6s_wifi:
 #      icon: mdi:cellphone-iphone

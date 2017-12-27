@@ -3,3 +3,4 @@ info_card:
   control: hidden
   entities:
     - sun.sun
+    - input_boolean.peter_home
