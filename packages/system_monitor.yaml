@@ -23,16 +23,12 @@ group:
       - alert.disk_use_critical
       - sensor.uptime
       - sensor.ha_uptime
-      # - binary_sensor.critical_disk_use
       - sensor.disk_used__2
       - sensor.disk_used_
       - sensor.disk_free_
       - sensor.last_boot
       - sensor.since_last_boot
-      - sensor.cert_check
-  #    - sensor.ssl_cert_expiry
-  #    - sensor.process_homebridge
-  #    - sensor.process_mosquitto
+      - sensor.ssl_cert_expiry
 
 sensor:
   - platform: systemmonitor

@@ -6,12 +6,12 @@
   trigger:
     - platform: state
       entity_id: device_tracker.petergalaxys7
-      state: 'not_home'
+      to: 'not_home'
       for:
         minutes: 10
     - platform: state
       entity_id: device_tracker.peter_telefon
-      state: 'not_home'
+      to: 'not_home'
   action:
     - service: homeassistant.turn_off
       entity_id: input_boolean.peter_home
@@ -24,10 +24,10 @@
   trigger:
     - platform: state
       entity_id: device_tracker.petergalaxys7
-      state: 'home'
+      to: 'home'
     - platform: state
       entity_id: device_tracker.peter_telefon
-      state: 'home'
+      to: 'home'
   action:
      service: homeassistant.turn_on
      entity_id: input_boolean.peter_home
