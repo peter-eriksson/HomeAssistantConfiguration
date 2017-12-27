@@ -1,5 +1,5 @@
     device_tracker.petergalaxys7:
       icon: mdi:cellphone-iphone
-    input_boolean.peter_home:
+    sensor.peter_home_sensor:
       icon: mdi:cellphone-iphone
-      friendly_name: Peter hemma
+      friendly_name: Peter är hemma
