@@ -1,9 +1,51 @@
+- alias: 'Peter phone is home'
+  trigger:
+    platform: state
+    entity_id: device_tracker.petergalaxys7
+    from: 'not_home'
+    to: 'home'
+  action:
+    service: notify.pushbullet_peter
+    data:
+      message: 'Peter phone is now home'
+- alias: 'Peter phone is away'
+  trigger:
+    platform: state
+    entity_id: device_tracker.petergalaxys7
+    from: 'home'
+    to: 'not_home'
+  action:
+    service: notify.pushbullet_peter
+    data:
+      message: 'Peter phone has left home'
+
+- alias: 'Peter gps is home'
+  trigger:
+    platform: state
+    entity_id: device_tracker.peter_telefon
+    from: 'not_home'
+    to: 'home'
+  action:
+    service: notify.pushbullet_peter
+    data:
+      message: 'Peter gps is now home'
+- alias: 'Peter gps is away'
+  trigger:
+    platform: state
+    entity_id: device_tracker.peter_telefon
+    from: 'home'
+    to: 'not_home'
+  action:
+    service: notify.pushbullet_peter
+    data:
+      message: 'Peter gps has left home'
+
 - alias: 'Peter is home'
   trigger:
     platform: state
-    entity_id: device_tracker.petergalaxys7lan
-    from: 'not_home'
-    to: 'home'
+    entity_id: input_boolean.peter_home
+    from: 'off'
+    to: 'on'
   action:
     service: notify.pushbullet_peter
     data:
@@ -11,9 +53,9 @@
 - alias: 'Peter is away'
   trigger:
     platform: state
-    entity_id: device_tracker.petergalaxys7lan
-    from: 'home'
-    to: 'not_home'
+    entity_id: input_boolean.peter_home
+    from: 'on'
+    to: 'off'
   action:
     service: notify.pushbullet_peter
     data:

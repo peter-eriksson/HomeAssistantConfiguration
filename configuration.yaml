@@ -13,18 +13,13 @@ homeassistant:
 config:
 
 http:
-  # Uncomment this to add a password (recommended!)
   api_password: !secret http_password
-  # Uncomment this if you are using SSL or running in Docker etc
-  # base_url: example.duckdns.org:8123
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
   base_url: !secret base_url
 
 # Checks for available updates
 updater:
-  # Optional, allows Home Assistant developers to focus on popular components.
-  # include_used_components: true
 
 # Discover some devices automatically
 discovery:
@@ -32,12 +27,8 @@ discovery:
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
-# ########################################
-# ###                GUI               ###
-# ########################################
-
 frontend:
-#map:
+map:
 
 # ########################################
 # ###              LOGGING             ###
@@ -97,3 +88,8 @@ notify: !include notify.yaml
 #script: !include scripts.yaml
 group: !include_dir_merge_named group/
 
+input_boolean:
+  peter_home:
+    name: Peter Home
+    initial: on
+    icon: mdi:cellphone-iphone

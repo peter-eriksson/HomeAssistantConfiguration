@@ -20,7 +20,7 @@
         - thu
         - fri
     - condition: state
-      entity_id: device_tracker.petergalaxys7lan
+      entity_id: device_tracker.petergalaxys7
       state: 'not_home'
   action:
     - service: switch.turn_off

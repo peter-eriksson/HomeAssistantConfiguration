@@ -6,7 +6,4 @@
     home_interval: 10
     exclude:
       - !secret hass_wlan_ip
-  # - platform: bluetooth_tracker
-  # - platform: owntracks
-#  - platform: bluetooth_tracker
   - platform: owntracks_http
