@@ -64,10 +64,10 @@ switch: !include_dir_merge_list switch
 #scene: !include_dir_merge_list scene
 device_tracker: !include device_tracker.yaml
 zone:
-#  - name: Carola School
-#    latitude: !secret school_lat
-#    longitude: !secret school_long
-#    icon: mdi:code-braces
+  - name: Carola School
+    latitude: !secret carola_school_lat
+    longitude: !secret carola_school_long
+    icon: mdi:code-braces
   - name: Peter Work
     latitude: !secret work_lat
     longitude: !secret work_long
@@ -90,6 +90,10 @@ group: !include_dir_merge_named group/
 
 input_boolean:
   peter_home:
-    name: Peter Home
+    name: Peter home
+    initial: on
+    icon: mdi:cellphone-iphone
+  carola_home:
+    name: Carola home
     initial: on
     icon: mdi:cellphone-iphone
