@@ -8,7 +8,7 @@
       entity_id: device_tracker.petergalaxys7
       to: 'not_home'
       for:
-        minutes: 10
+        minutes: 20
     - platform: state
       entity_id: device_tracker.peter_telefon
       to: 'not_home'
@@ -42,7 +42,7 @@
       entity_id: device_tracker.carolahonor8
       to: 'not_home'
       for:
-        minutes: 10
+        minutes: 20
     - platform: state
       entity_id: device_tracker.carola_telefon
       to: 'not_home'
