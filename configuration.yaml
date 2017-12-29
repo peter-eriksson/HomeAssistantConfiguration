@@ -67,7 +67,8 @@ zone:
   - name: Carola School
     latitude: !secret carola_school_lat
     longitude: !secret carola_school_long
-    icon: mdi:code-braces
+    icon: mdi:school
+    radius: 200
   - name: Peter Work
     latitude: !secret work_lat
     longitude: !secret work_long
