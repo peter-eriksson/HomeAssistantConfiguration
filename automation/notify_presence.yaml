@@ -39,3 +39,24 @@
     service: notify.pushbullet_peter
     data:
       message: 'Carola has left home'
+
+- alias: 'Carola is at school'
+  trigger:
+    platform: zone
+    entity_id: device_tracker.carola_telefon
+    zone: zone.carola_school
+    event: enter
+  action:
+    service: notify.pushbullet_peter
+    data:
+      message: 'Carola is at school'
+- alias: 'Carola left school'
+  trigger:
+    platform: zone
+    entity_id: device_tracker.carola_telefon
+    zone: zone.carola_school
+    event: leave
+  action:
+    service: notify.pushbullet_peter
+    data:
+      message: 'Carola has left school'
