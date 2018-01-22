@@ -6,6 +6,12 @@
     - service: switch.turn_on
       data:
         entity_id: switch.vardagsrum
+    - service: switch.turn_on
+      data:
+        entity_id: switch.spegellampa
+    - service: switch.turn_on
+      data:
+        entity_id: switch.fonsterlampa_kladkammare
 
 - alias: 'No lights at day'
   trigger:
@@ -26,6 +32,12 @@
     - service: switch.turn_off
       data:
         entity_id: switch.vardagsrum
+    - service: switch.turn_on
+      data:
+        entity_id: switch.spegellampa
+    - service: switch.turn_on
+      data:
+        entity_id: switch.fonsterlampa_kladkammare
 
 - alias: 'Evening lights'
   trigger:
@@ -35,6 +47,12 @@
     - service: switch.turn_on
       data:
         entity_id: switch.vardagsrum
+    - service: switch.turn_on
+      data:
+        entity_id: switch.spegellampa
+    - service: switch.turn_on
+      data:
+        entity_id: switch.fonsterlampa_kladkammare
 
 - alias: 'Outside back lights on'
   trigger:
