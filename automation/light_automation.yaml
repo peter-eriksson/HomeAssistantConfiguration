@@ -1,7 +1,35 @@
-- alias: 'Morning lights'
+- alias: 'Morning lights weekday'
   trigger:
     - platform: time
       at: "07:00:00"
+  condition:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.vardagsrum
+    - service: switch.turn_on
+      data:
+        entity_id: switch.spegellampa
+    - service: switch.turn_on
+      data:
+        entity_id: switch.fonsterlampa_kladkammare
+
+- alias: 'Morning lights weekend'
+  trigger:
+    - platform: time
+      at: "08:00:00"
+  condition:
+    - condition: time
+      weekday:
+        - sat
+        - sun
   action:
     - service: switch.turn_on
       data:
@@ -27,6 +55,9 @@
         - fri
     - condition: state
       entity_id: device_tracker.petergalaxys7
+      state: 'not_home'
+    - condition: state
+      entity_id: device_tracker.carolahonor8
       state: 'not_home'
   action:
     - service: switch.turn_off
@@ -57,7 +88,7 @@
 - alias: 'Outside back lights on'
   trigger:
     - platform: time
-      at: "17:00:00"
+      at: "20:00:00"
   action:
     - service: switch.turn_on
       data:
@@ -66,7 +97,7 @@
 - alias: 'Outside back lights off'
   trigger:
     - platform: time
-      at: "23:30:00"
+      at: "22:30:00"
   action:
     - service: switch.turn_off
       data:
