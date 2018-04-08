@@ -45,6 +45,8 @@ tellstick:
   port: [50800, 50801]
 #zwave:
 #  usb_path: /dev/zwave
+zwave:
+  usb_path: /dev/ttyACM0
 
 # Text to speech
 tts:
