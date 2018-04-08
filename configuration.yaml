@@ -41,6 +41,8 @@ recorder:
 ########################################
 
 tellstick:
+  host: core-tellstick
+  port: [50800, 50801]
 #zwave:
 #  usb_path: /dev/zwave
 
