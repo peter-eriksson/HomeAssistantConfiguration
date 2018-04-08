@@ -3,5 +3,5 @@ info_card:
   control: hidden
   entities:
     - sun.sun
-    - sensor.peter_home_sensor
-    - sensor.carola_home_sensor
+#    - sensor.peter_home_sensor
+#    - sensor.carola_home_sensor

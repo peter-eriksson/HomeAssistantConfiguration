@@ -8,6 +8,3 @@ everything_view:
     - group.all_switches
     - group.all_zwave
     - group.notify_peter
-#    - group.all_scripts
-#    - group.all_plants
-#    - device_tracker.peter

@@ -3,19 +3,3 @@ inside_lights_card:
   name: Inside lights
   entities:
     - switch.vardagsrum
-#    - light.living_room_light
-#    - light.bedside_lamp
-#    - light.dining_area_ceiling_light_level  
-#    - light.floorlamp_reading_light
-#    - light.floorlamp_uplight
-#    - light.hallway_window_light
-#    - light.isa_ceiling_light
-#    - light.living_room_ceiling_light_level
-#    - light.living_room_spotlights_level
-#    - light.passage_ceiling_spotlights_level
-#    - group.stairs_lights
-#    - group.walk_in_closet_lights
-#    - light.stefan_ceiling_light
-#    - light.upstairs_hallway_ceiling_light_level
-#    # - light.kitchen_sink_light
-#    - light.gateway_light_34ce008bfc4b

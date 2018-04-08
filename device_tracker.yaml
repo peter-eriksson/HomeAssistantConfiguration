@@ -1,9 +1,10 @@
-  - platform: nmap_tracker
-    hosts: !secret nmap_tracker_hosts
-    track_new_devices: false
-    interval_seconds: 20
-    consider_home: 20
-    home_interval: 10
-    exclude:
-      - !secret hass_wlan_ip
-  - platform: owntracks_http
+# TEMPORARY DISABLED
+#  - platform: nmap_tracker
+#    hosts: !secret nmap_tracker_hosts
+#    track_new_devices: false
+#    interval_seconds: 20
+#    consider_home: 20
+#    home_interval: 10
+#    exclude:
+#      - !secret hass_wlan_ip
+#  - platform: owntracks_http

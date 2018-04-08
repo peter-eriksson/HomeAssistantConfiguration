@@ -1,12 +1,13 @@
-  - platform: template
-    sensors:
-      peter_home_sensor:
-        friendly_name: Peter är hemma
-        value_template: "{{ states.input_boolean.peter_home.state == 'on' }}"
-        entity_id: input_boolean.peter_home
-  - platform: template
-    sensors:
-      carola_home_sensor:
-        friendly_name: Carola är hemma
-        value_template: "{{ states.input_boolean.carola_home.state == 'on' }}"
-        entity_id: input_boolean.carola_home
+# TEMPORARY DISABLED
+#  - platform: template
+#    sensors:
+#      peter_home_sensor:
+#        friendly_name: Peter är hemma
+#        value_template: "{{ states.input_boolean.peter_home.state == 'on' }}"
+#        entity_id: input_boolean.peter_home
+#  - platform: template
+#    sensors:
+#      carola_home_sensor:
+#        friendly_name: Carola är hemma
+#        value_template: "{{ states.input_boolean.carola_home.state == 'on' }}"
+#        entity_id: input_boolean.carola_home
