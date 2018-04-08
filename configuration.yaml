@@ -9,31 +9,22 @@ homeassistant:
   packages: !include_dir_named packages
   # customize_glob: !include customglob.yaml
 
-# Enables configuration UI
+frontend:
 config:
 
 http:
-  api_password: !secret http_password
-  ssl_certificate: !secret ssl_certificate
-  ssl_key: !secret ssl_key
-  base_url: !secret base_url
+#  api_password: !secret http_password
+#  ssl_certificate: !secret ssl_certificate
+#  ssl_key: !secret ssl_key
+#  base_url: !secret base_url
 
 # Checks for available updates
 updater:
-
 # Discover some devices automatically
 discovery:
-
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
-
-frontend:
 map:
-
-# ########################################
-# ###              LOGGING             ###
-# ########################################
-
 # Enables support for tracking state changes over time.
 history:
 # View all events in a logbook
@@ -57,12 +48,12 @@ tellstick:
 tts:
   platform: google
 
+cloud:
+
 media_player: !include media_player.yaml
 sensor: !include_dir_merge_list sensor
-#light: !include_dir_merge_list lights
 switch: !include_dir_merge_list switch
-#scene: !include_dir_merge_list scene
-device_tracker: !include device_tracker.yaml
+#device_tracker: !include device_tracker.yaml
 #zone:
 #  - name: Carola School
 #    latitude: !secret carola_school_lat
@@ -80,11 +71,9 @@ device_tracker: !include device_tracker.yaml
 #    icon: mdi:home
 #    radius: 100
 
-# ########################################
-# ###             SERVICES             ###
-# ########################################
+# Services
 automation: !include_dir_merge_list automation
-notify: !include notify.yaml
+#notify: !include notify.yaml
 group: !include_dir_merge_named group/
 
 input_boolean:

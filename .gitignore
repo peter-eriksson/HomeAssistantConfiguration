@@ -16,6 +16,8 @@ lib
 deps
 tts
 www
+.HA_VERSION
+.cloud
 .uuid
 .idea
 secrets.yaml
