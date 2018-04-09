@@ -14,3 +14,51 @@ media_player.vardagsrum:
   name:
   platform: cast
   unique_id: f7836c0c-2b10-b3a8-700a-b90680ebaeb8
+binary_sensor.vardagsrum_multisensor_sensor:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076463104
+sensor.vardagsrum_multisensor_temperature:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076479506
+sensor.vardagsrum_multisensor_luminance:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076479538
+sensor.vardagsrum_multisensor_relative_humidity:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076479570
+sensor.vardagsrum_multisensor_ultraviolet:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076479922
+sensor.vardagsrum_multisensor_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528065
+sensor.vardagsrum_multisensor_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528081
+sensor.vardagsrum_multisensor_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528097
+sensor.vardagsrum_multisensor_burglar:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528225
+switch.switch:
+  name:
+  platform: zwave
+  unique_id: 3-72057594093060096
+switch.fonsterlampa_kladkammare:
+  name:
+  platform: zwave
+  unique_id: 5-72057594126614528
+switch.spegellampa:
+  name:
+  platform: zwave
+  unique_id: 6-72057594143391744
