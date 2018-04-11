@@ -43,10 +43,13 @@ recorder:
 tellstick:
   host: core-tellstick
   port: [50800, 50801]
-#zwave:
-#  usb_path: /dev/zwave
 zwave:
   usb_path: /dev/ttyACM0
+xiaomi_aqara:
+  discovery_retry: 5
+  gateways:
+    - mac: !secret xiaomi_mac
+      key: !secret xiaomi_key
 
 # Text to speech
 tts:
