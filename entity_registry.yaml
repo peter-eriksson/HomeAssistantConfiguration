@@ -67,7 +67,7 @@ binary_sensor.motion_sensor_stairs:
   platform: xiaomi_aqara
   unique_id: status158d0001e5597e
 light.gateway_light:
-  name:
+  name: Xiaomi gateway light
   platform: xiaomi_aqara
   unique_id: rgb7811dcdacb11
 sensor.temperature_158d000208f41a:
@@ -83,11 +83,11 @@ sensor.humidity_158d0002045dec:
   platform: xiaomi_aqara
   unique_id: humidity158d0002045dec
 sensor.temperature_office:
-  name:
+  name: Kontor temperatur
   platform: xiaomi_aqara
   unique_id: temperature158d0002274024
 sensor.humidity_office:
-  name:
+  name: Kontor humidity
   platform: xiaomi_aqara
   unique_id: humidity158d0002274024
 sensor.pressure_office:
@@ -111,11 +111,11 @@ binary_sensor.stairs:
   platform: xiaomi_aqara
   unique_id: status158d000200c723
 sensor.humidity_kitchen:
-  name:
+  name: Kök humidity
   platform: xiaomi_aqara
   unique_id: humidity158d0001f2610e
 sensor.temperature_kitchen:
-  name:
+  name: Kök temperatur
   platform: xiaomi_aqara
   unique_id: temperature158d0001f2610e
 sensor.pressure_kitchen:
