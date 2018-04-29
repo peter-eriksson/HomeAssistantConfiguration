@@ -10,3 +10,11 @@ temp_and_light_card:
     - sensor.vardagsrum_multisensor_temperature
     - sensor.vardagsrum_multisensor_relative_humidity
     - sensor.vardagsrum_multisensor_luminance
+    - sensor.humidity_kitchen
+    - sensor.humidity_office
+    - sensor.illumination_gateway
+    - sensor.illumination_stairs
+    - sensor.pressure_kitchen
+    - sensor.pressure_office
+    - sensor.temperature_kitchen
+    - sensor.temperature_office
