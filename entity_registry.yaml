@@ -55,15 +55,15 @@ switch.switch:
   platform: zwave
   unique_id: 3-72057594093060096
 switch.fonsterlampa_kladkammare:
-  name:
+  name: Fönsterlampa klädkammare
   platform: zwave
   unique_id: 5-72057594126614528
 switch.spegellampa:
-  name:
+  name: Spegellampa
   platform: zwave
   unique_id: 6-72057594143391744
 binary_sensor.motion_sensor_stairs:
-  name:
+  name: Trappor rörelse
   platform: xiaomi_aqara
   unique_id: status158d0001e5597e
 light.gateway_light:
@@ -91,15 +91,15 @@ sensor.humidity_office:
   platform: xiaomi_aqara
   unique_id: humidity158d0002274024
 sensor.pressure_office:
-  name:
+  name: Kontor lufttryck
   platform: xiaomi_aqara
   unique_id: pressure158d0002274024
 sensor.illumination_stairs:
-  name:
+  name: Trappor ljusstyrka
   platform: xiaomi_aqara
   unique_id: lux158d0001e5597e
 sensor.illumination_gateway:
-  name:
+  name: Xiaomi gateway ljusstyrka
   platform: xiaomi_aqara
   unique_id: illumination7811dcdacb11
 sensor.humidity_158d000208f41a:
@@ -107,7 +107,7 @@ sensor.humidity_158d000208f41a:
   platform: xiaomi_aqara
   unique_id: humidity158d000208f41a
 binary_sensor.stairs:
-  name:
+  name: Trappor
   platform: xiaomi_aqara
   unique_id: status158d000200c723
 sensor.humidity_kitchen:
@@ -119,6 +119,6 @@ sensor.temperature_kitchen:
   platform: xiaomi_aqara
   unique_id: temperature158d0001f2610e
 sensor.pressure_kitchen:
-  name:
+  name: Kök lufttryck
   platform: xiaomi_aqara
   unique_id: pressure158d0001f2610e
