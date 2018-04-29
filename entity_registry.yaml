@@ -62,3 +62,63 @@ switch.spegellampa:
   name:
   platform: zwave
   unique_id: 6-72057594143391744
+binary_sensor.motion_sensor_stairs:
+  name:
+  platform: xiaomi_aqara
+  unique_id: status158d0001e5597e
+light.gateway_light:
+  name:
+  platform: xiaomi_aqara
+  unique_id: rgb7811dcdacb11
+sensor.temperature_158d000208f41a:
+  name:
+  platform: xiaomi_aqara
+  unique_id: temperature158d000208f41a
+sensor.temperature_158d0002045dec:
+  name:
+  platform: xiaomi_aqara
+  unique_id: temperature158d0002045dec
+sensor.humidity_158d0002045dec:
+  name:
+  platform: xiaomi_aqara
+  unique_id: humidity158d0002045dec
+sensor.temperature_office:
+  name:
+  platform: xiaomi_aqara
+  unique_id: temperature158d0002274024
+sensor.humidity_office:
+  name:
+  platform: xiaomi_aqara
+  unique_id: humidity158d0002274024
+sensor.pressure_office:
+  name:
+  platform: xiaomi_aqara
+  unique_id: pressure158d0002274024
+sensor.illumination_stairs:
+  name:
+  platform: xiaomi_aqara
+  unique_id: lux158d0001e5597e
+sensor.illumination_gateway:
+  name:
+  platform: xiaomi_aqara
+  unique_id: illumination7811dcdacb11
+sensor.humidity_158d000208f41a:
+  name:
+  platform: xiaomi_aqara
+  unique_id: humidity158d000208f41a
+binary_sensor.stairs:
+  name:
+  platform: xiaomi_aqara
+  unique_id: status158d000200c723
+sensor.humidity_kitchen:
+  name:
+  platform: xiaomi_aqara
+  unique_id: humidity158d0001f2610e
+sensor.temperature_kitchen:
+  name:
+  platform: xiaomi_aqara
+  unique_id: temperature158d0001f2610e
+sensor.pressure_kitchen:
+  name:
+  platform: xiaomi_aqara
+  unique_id: pressure158d0001f2610e
