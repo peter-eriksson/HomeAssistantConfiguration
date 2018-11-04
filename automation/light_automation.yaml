@@ -71,10 +71,17 @@
         entity_id: switch.fonsterlampa_kladkammare
 
 - alias: 'Evening lights'
+#  trigger:
+#    - platform: time
+#      at: "16:30:00"
   trigger:
-    - platform: time
-      at: "16:30:00"
+    platform: sun
+    # Possible values: sunset, sunrise
+    event: sunset
   action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.telldus_tzwp100_plugin_switch_switch
     - service: switch.turn_on
       data:
         entity_id: switch.vardagsrum
@@ -84,15 +91,6 @@
     - service: switch.turn_on
       data:
         entity_id: switch.fonsterlampa_kladkammare
-
-- alias: 'Late evening lights'
-  trigger:
-    - platform: time
-      at: "18:00:00"
-  action:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.telldus_tzwp100_plugin_switch_switch
 
 #- alias: 'Outside back lights on'
 #  trigger:
