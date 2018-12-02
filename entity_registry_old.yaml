@@ -1,0 +1,124 @@
+media_player.sovrum:
+  name:
+  platform: cast
+  unique_id: c93865a9-727e-61dc-8a81-4221d517751d
+media_player.living_room_speaker:
+  name:
+  platform: cast
+  unique_id: a5620b8a-cd0a-9228-eef9-c927bad9abde
+media_player.kitchen:
+  name:
+  platform: cast
+  unique_id: 16c1ba70-0bd1-d1f9-f0b6-962bdf7b9b3e
+media_player.vardagsrum:
+  name:
+  platform: cast
+  unique_id: f7836c0c-2b10-b3a8-700a-b90680ebaeb8
+binary_sensor.vardagsrum_multisensor_sensor:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076463104
+sensor.vardagsrum_multisensor_temperature:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076479506
+sensor.vardagsrum_multisensor_luminance:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076479538
+sensor.vardagsrum_multisensor_relative_humidity:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076479570
+sensor.vardagsrum_multisensor_ultraviolet:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076479922
+sensor.vardagsrum_multisensor_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528065
+sensor.vardagsrum_multisensor_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528081
+sensor.vardagsrum_multisensor_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528097
+sensor.vardagsrum_multisensor_burglar:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528225
+switch.switch:
+  name:
+  platform: zwave
+  unique_id: 3-72057594093060096
+switch.fonsterlampa_kladkammare:
+  name: Fönsterlampa klädkammare
+  platform: zwave
+  unique_id: 5-72057594126614528
+switch.spegellampa:
+  name: Spegellampa
+  platform: zwave
+  unique_id: 6-72057594143391744
+binary_sensor.motion_sensor_stairs:
+  name: Trappor rörelse
+  platform: xiaomi_aqara
+  unique_id: status158d0001e5597e
+light.gateway_light:
+  name: Xiaomi gateway light
+  platform: xiaomi_aqara
+  unique_id: rgb7811dcdacb11
+sensor.temperature_158d000208f41a:
+  name:
+  platform: xiaomi_aqara
+  unique_id: temperature158d000208f41a
+sensor.temperature_158d0002045dec:
+  name:
+  platform: xiaomi_aqara
+  unique_id: temperature158d0002045dec
+sensor.humidity_158d0002045dec:
+  name:
+  platform: xiaomi_aqara
+  unique_id: humidity158d0002045dec
+sensor.temperature_office:
+  name: Kontor temperatur
+  platform: xiaomi_aqara
+  unique_id: temperature158d0002274024
+sensor.humidity_office:
+  name: Kontor humidity
+  platform: xiaomi_aqara
+  unique_id: humidity158d0002274024
+sensor.pressure_office:
+  name: Kontor lufttryck
+  platform: xiaomi_aqara
+  unique_id: pressure158d0002274024
+sensor.illumination_stairs:
+  name: Trappor ljusstyrka
+  platform: xiaomi_aqara
+  unique_id: lux158d0001e5597e
+sensor.illumination_gateway:
+  name: Xiaomi gateway ljusstyrka
+  platform: xiaomi_aqara
+  unique_id: illumination7811dcdacb11
+sensor.humidity_158d000208f41a:
+  name:
+  platform: xiaomi_aqara
+  unique_id: humidity158d000208f41a
+binary_sensor.stairs:
+  name: Trappor
+  platform: xiaomi_aqara
+  unique_id: status158d000200c723
+sensor.humidity_kitchen:
+  name: Kök humidity
+  platform: xiaomi_aqara
+  unique_id: humidity158d0001f2610e
+sensor.temperature_kitchen:
+  name: Kök temperatur
+  platform: xiaomi_aqara
+  unique_id: temperature158d0001f2610e
+sensor.pressure_kitchen:
+  name: Kök lufttryck
+  platform: xiaomi_aqara
+  unique_id: pressure158d0001f2610e
