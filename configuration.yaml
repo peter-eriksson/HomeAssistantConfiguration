@@ -58,7 +58,7 @@ tts:
 
 cloud:
 
-media_player: !include media_player.yaml
+#media_player: !include media_player.yaml
 sensor: !include_dir_merge_list sensor
 switch: !include_dir_merge_list switch
 #device_tracker: !include device_tracker.yaml
