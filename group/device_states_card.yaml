@@ -1,5 +1,0 @@
-device_states_card:
-  name: Enhets-status
-  entities:
-#  - sensor.xiaomi_gateway
-  - sensor.hass_rpi

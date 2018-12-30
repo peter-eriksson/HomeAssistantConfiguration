@@ -3,8 +3,5 @@ everything_view:
   name: All
   entities:
     - group.all_automations
-    - group.all_devices
     - group.all_lights
     - group.all_switches
-    - group.all_zwave
-    - group.notify_peter

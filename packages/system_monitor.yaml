@@ -1,58 +1,14 @@
 homeassistant:
   customize:
-    sensor.disk_used_:
-      friendly_name: Rpi Disk Used
     sensor.uptime:
       friendly_name: 'Hass Uptime'
-#    sensor.ha_uptime:
-#      friendly_name: 'Hass Up Since'
-#      icon: mdi:timetable
-    
+
 group:
   system_monitor_card:
     name: System Monitor Hass Rpi
     entities:
-      - alert.disk_use_critical
       - sensor.uptime
-#      - sensor.ha_uptime
-#      - sensor.disk_used__2
-#      - sensor.disk_used_
-#      - sensor.disk_free_
-#      - sensor.last_boot
-#      - sensor.since_last_boot
-#      - sensor.ssl_cert_expiry
 
 sensor:
-  - platform: systemmonitor
-    resources:
-#      - type: disk_use_percent
-#        arg: /
-#      - type: disk_use
-#        arg: /
-#      - type: disk_free
-#        arg: /
-      - type: last_boot
-      - type: since_last_boot
-
   - platform: uptime
     unit_of_measurement: hours
-
-#  - platform: command_line
-#    name: "HA Uptime"
-#    command: echo "$(($(date +%s) - $(date -d "$(head -n1 /home/homeassistant/.homeassistant/home-assistant.log | cut -d' ' -f-2)" +%s)))"
-#    scan_interval: 360
-#    value_template: >-
-#      {% set uptime = value | int %}
-#      {% set seconds = uptime % 60 %}
-#      {% set minutes = ((uptime % 3600) / 60) | int %}
-#      {% set hours = ((uptime % 86400) / 3600) | int %}
-#      {% set days = (uptime / 86400) | int %}
-#      {%- if days > 0 -%}
-#        {%- if days == 1 -%}
-#          1 day
-#        {%- else -%}
-#          {{ days }} days
-#        {%- endif -%}
-#        {{ ', ' }}
-#      {%- endif -%}
-#      {{ '%02d' % hours }}:{{ '%02d' % minutes }}

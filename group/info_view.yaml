@@ -1,6 +1,0 @@
-default_view:
-  view: yes
-  name: Info
-  icon: mdi:information-outline
-  entities:
-    - group.info_card

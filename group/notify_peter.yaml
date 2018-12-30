@@ -1,7 +1,0 @@
-# TEMPORARY DISABLED
-#notify_peter:
-#  view: no
-#  name: Notify Peter
-#  entities:
-#    - input_text.peter_notify_text
-#    - input_boolean.notify_peter

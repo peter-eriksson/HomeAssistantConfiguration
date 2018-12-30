@@ -2,4 +2,6 @@ house_view:
   view: yes
   icon: mdi:home-heart
   entities:
-    - group.temp_and_light_card
+    - group.temp_card
+    - group.light_card
+    - group.humidity_card

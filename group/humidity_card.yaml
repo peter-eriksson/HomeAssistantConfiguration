@@ -1,0 +1,8 @@
+humidity_card:
+  name: Humidity
+  entities:
+    - sensor.utomhus_humidity
+    - sensor.krypgrund_humidity
+    - sensor.vardagsrum_multisensor_relative_humidity
+    - sensor.humidity_kitchen
+    - sensor.humidity_office

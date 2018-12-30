@@ -1,5 +1,0 @@
-inside_lights_card:
-  #control: hidden
-  name: Inside lights
-  entities:
-    - switch.vardagsrum

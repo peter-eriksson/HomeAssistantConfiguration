@@ -1,0 +1,7 @@
+light_card:
+  name: Light
+  entities:
+    - sun.sun
+    - sensor.vardagsrum_multisensor_luminance
+    - sensor.illumination_gateway
+    - sensor.illumination_stairs

@@ -1,4 +1,0 @@
-inside_lights_automations:
-  name: Inside Lights
-  entities:
-    - light.living_room_light

@@ -1,0 +1,10 @@
+temp_card:
+  name: Temperature
+  entities:
+    - sensor.frys_temperature
+    - sensor.kyl_temperature
+    - sensor.utomhus_temperature
+    - sensor.krypgrund_temperature
+    - sensor.vardagsrum_multisensor_temperature
+    - sensor.temperature_kitchen
+    - sensor.temperature_office

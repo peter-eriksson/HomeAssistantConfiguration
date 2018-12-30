@@ -1,4 +1,0 @@
-# TEMPORARY DISABLED
-#  - name: Pushbullet Peter
-#    platform: pushbullet
-#    api_key: !secret pushbullet_key_peter

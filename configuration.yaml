@@ -7,7 +7,6 @@ homeassistant:
   time_zone: Europe/Stockholm
   customize: !include_dir_merge_named customize
   packages: !include_dir_named packages
-  # customize_glob: !include customglob.yaml
 
 frontend:
 config:
@@ -52,16 +51,25 @@ xiaomi_aqara:
       key: !secret xiaomi_key
       host: 192.168.1.209
 
-# Text to speech
-tts:
-  platform: google
+#tts:
+#  platform: google
 
 cloud:
 
-#media_player: !include media_player.yaml
 sensor: !include_dir_merge_list sensor
 switch: !include_dir_merge_list switch
-#device_tracker: !include device_tracker.yaml
+
+#device_tracker:
+#  - platform: nmap_tracker
+#    hosts: !secret nmap_tracker_hosts
+#    track_new_devices: false
+#    interval_seconds: 20
+#    consider_home: 20
+#    home_interval: 10
+#    exclude:
+#      - !secret hass_wlan_ip
+#  - platform: owntracks_http
+
 #zone:
 #  - name: Carola School
 #    latitude: !secret carola_school_lat
@@ -79,17 +87,20 @@ switch: !include_dir_merge_list switch
 #    icon: mdi:home
 #    radius: 100
 
-# Services
 automation: !include_dir_merge_list automation
-#notify: !include notify.yaml
 group: !include_dir_merge_named group/
 
-input_boolean:
-  peter_home:
-    name: Peter home
-    initial: on
-    icon: mdi:cellphone-iphone
-  carola_home:
-    name: Carola home
-    initial: on
-    icon: mdi:cellphone-iphone
+#notify:
+#  - name: Pushbullet Peter
+#    platform: pushbullet
+#    api_key: !secret pushbullet_key_peter
+
+#input_boolean:
+#  peter_home:
+#    name: Peter home
+#    initial: on
+#    icon: mdi:cellphone-iphone
+#  carola_home:
+#    name: Carola home
+#    initial: on
+#    icon: mdi:cellphone-iphone
