@@ -2,6 +2,7 @@ temp_card:
   name: Temperatur
   entities:
     - sensor.frys_temperature
+    - sensor.frys_temperature_2
     - sensor.kyl_temperature
     - sensor.utomhus_temperature
     - sensor.krypgrund_temperature
