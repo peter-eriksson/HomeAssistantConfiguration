@@ -1,6 +1,6 @@
-everything_view:
+default_view:
   view: yes
-  name: All
+  name: Allt
   entities:
     - group.all_automations
     - group.all_lights

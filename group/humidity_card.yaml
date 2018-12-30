@@ -1,5 +1,5 @@
 humidity_card:
-  name: Humidity
+  name: Luftfuktighet
   entities:
     - sensor.utomhus_humidity
     - sensor.krypgrund_humidity

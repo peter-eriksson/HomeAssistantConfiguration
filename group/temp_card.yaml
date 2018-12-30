@@ -1,5 +1,5 @@
 temp_card:
-  name: Temperature
+  name: Temperatur
   entities:
     - sensor.frys_temperature
     - sensor.kyl_temperature

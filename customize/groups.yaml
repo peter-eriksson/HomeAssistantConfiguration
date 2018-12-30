@@ -1,6 +1,9 @@
     group.all_automations:
       hidden: false
+      friendly_name: Automationer
     group.all_lights:
       hidden: false
+      friendly_name: Alla ljus
     group.all_switches:
       hidden: false
+      friendly_name: Alla brytare
