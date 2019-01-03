@@ -1,7 +1,0 @@
-debug_view:
-  view: yes
-  icon: mdi:settings
-  entities:
-    - group.all_automations
-    - group.all_lights
-    - group.all_switches

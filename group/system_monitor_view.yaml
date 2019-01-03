@@ -1,6 +1,0 @@
-system_monitor_view:
-  name: System info
-  icon: mdi:lan
-  view: yes
-  entities:
-    - group.system_monitor_card

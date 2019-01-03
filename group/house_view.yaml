@@ -1,8 +1,0 @@
-default_view:
-  view: yes
-  icon: mdi:home-circle
-  entities:
-    - group.light_card
-    - group.temp_card
-    - group.lumnix_card
-    - group.humidity_card
