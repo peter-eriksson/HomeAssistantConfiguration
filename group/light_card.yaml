@@ -1,7 +1,8 @@
 light_card:
   name: Ljus
   entities:
-    - sun.sun
-    - sensor.vardagsrum_multisensor_luminance
-    - sensor.illumination_gateway
-    - sensor.illumination_stairs
+    - light.livingroom_roof_dimmer_level
+    - light.spegellampa
+    - light.vardagsrum
+    - light.fonsterlampa_kladkammare
+    - light.sovrumslampa

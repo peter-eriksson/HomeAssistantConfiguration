@@ -1,0 +1,7 @@
+lumnix_card:
+  name: Ljus
+  entities:
+    - sun.sun
+    - sensor.vardagsrum_multisensor_luminance
+    - sensor.illumination_gateway
+    - sensor.illumination_stairs

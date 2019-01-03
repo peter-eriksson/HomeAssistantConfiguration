@@ -1,6 +1,6 @@
-default_view:
+debug_view:
   view: yes
-  name: Allt
+  icon: mdi:settings
   entities:
     - group.all_automations
     - group.all_lights
