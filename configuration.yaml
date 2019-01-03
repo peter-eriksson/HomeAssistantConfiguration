@@ -58,6 +58,19 @@ cloud:
 
 sensor: !include_dir_merge_list sensor
 switch: !include_dir_merge_list switch
+light:
+  - platform: switch
+    name: Fönsterlampa klädkammare
+    entity_id: switch.fonsterlampa_kladkammare
+  - platform: switch
+    name: Spegellampa
+    entity_id: switch.spegellampa
+  - platform: switch
+    name: Sovrumslampa
+    entity_id: switch.bedroom_switch
+  - platform: switch
+    name: Vardagsrum
+    entity_id: switch.vardagsrum
 
 #device_tracker:
 #  - platform: nmap_tracker
