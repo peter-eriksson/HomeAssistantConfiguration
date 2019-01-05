@@ -1,0 +1,15 @@
+power_card:
+  name: Förbrukning
+  entities:
+    - sensor.tvattmaskin_current
+    - sensor.tvattmaskin_energy
+    - sensor.tvattmaskin_power
+    - sensor.tvattmaskin_previous_reading
+    - sensor.tvattmaskin_voltage
+    - sensor.torktumlare_current
+    - sensor.torktumlare_energy
+    - sensor.torktumlare_power
+    - sensor.torktumlare_previous_reading
+    - sensor.torktumlare_voltage
+    - sensor.qubino_zmnhdd1_flush_dimmer_energy
+    - sensor.qubino_zmnhdd1_flush_dimmer_power

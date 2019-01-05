@@ -8,6 +8,7 @@ default_view:
     - group.temp_card
     - group.humidity_card
     - group.lumnix_card
+    - group.power_card
 
 # MEDIA PLAYERS
 media_player_view:
