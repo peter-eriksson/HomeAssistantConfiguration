@@ -71,6 +71,9 @@ light:
   - platform: switch
     name: Vardagsrum
     entity_id: switch.vardagsrum
+  - platform: switch
+    name: Korridor
+    entity_id: switch.hallway_switch
 
 #device_tracker:
 #  - platform: nmap_tracker
