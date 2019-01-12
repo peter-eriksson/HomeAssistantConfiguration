@@ -11,5 +11,6 @@ power_card:
     - sensor.torktumlare_power
     - sensor.torktumlare_previous_reading
     - sensor.torktumlare_voltage
-    - sensor.qubino_zmnhdd1_flush_dimmer_energy
-    - sensor.qubino_zmnhdd1_flush_dimmer_power
+    - sensor.livingroom_roof_dimmer_energy
+    - sensor.livingroom_roof_dimmer_power
+    - sensor.vattenforbrukning_totalt
