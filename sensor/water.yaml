@@ -1,0 +1,5 @@
+  - platform: mqtt
+    state_topic: "home/water/total"
+    name: "Vattenförbrukning totalt"
+    unit_of_measurement: 'm³'
+    icon: mdi:water-pump
