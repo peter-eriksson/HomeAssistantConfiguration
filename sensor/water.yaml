@@ -3,3 +3,8 @@
     name: "Vattenförbrukning totalt"
     unit_of_measurement: 'm³'
     icon: mdi:water-pump
+  - platform: mqtt
+    state_topic: "home/water/flow"
+    name: "Vattenförbrukning flöde"
+    unit_of_measurement: 'l/s'
+    icon: mdi:water-pump

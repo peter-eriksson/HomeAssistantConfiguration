@@ -14,3 +14,4 @@ power_card:
     - sensor.livingroom_roof_dimmer_energy
     - sensor.livingroom_roof_dimmer_power
     - sensor.vattenforbrukning_totalt
+    - sensor.vattenforbrukning_flode
