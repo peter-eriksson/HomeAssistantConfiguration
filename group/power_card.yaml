@@ -1,16 +1,16 @@
 power_card:
   name: Förbrukning
   entities:
-    - sensor.tvattmaskin_current
+#    - sensor.tvattmaskin_current
     - sensor.tvattmaskin_energy
     - sensor.tvattmaskin_power
-    - sensor.tvattmaskin_previous_reading
-    - sensor.tvattmaskin_voltage
-    - sensor.torktumlare_current
+#    - sensor.tvattmaskin_previous_reading
+#    - sensor.tvattmaskin_voltage
+#    - sensor.torktumlare_current
     - sensor.torktumlare_energy
     - sensor.torktumlare_power
-    - sensor.torktumlare_previous_reading
-    - sensor.torktumlare_voltage
+#    - sensor.torktumlare_previous_reading
+#    - sensor.torktumlare_voltage
     - sensor.livingroom_roof_dimmer_energy
     - sensor.livingroom_roof_dimmer_power
     - sensor.vattenforbrukning_totalt
