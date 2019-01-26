@@ -1,7 +1,7 @@
 - alias: 'Morning lights weekday'
   trigger:
     - platform: time
-      at: "07:00:00"
+      at: "06:50:00"
   condition:
     - condition: time
       weekday:
@@ -11,15 +11,32 @@
         - thu
         - fri
   action:
-    - service: switch.turn_on
+    - service: light.turn_on
       data:
-        entity_id: switch.vardagsrum
-    - service: switch.turn_on
+        entity_id: light.vardagsrum
+    - service: light.turn_on
       data:
-        entity_id: switch.spegellampa
-    - service: switch.turn_on
+        entity_id: light.spegellampa
+    - service: light.turn_on
       data:
-        entity_id: switch.fonsterlampa_kladkammare
+        entity_id: light.fonsterlampa_kladkammare
+
+- alias: 'Morning korridor lights weekday'
+  trigger:
+    - platform: time
+      at: "07:05:00"
+  condition:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.korridor
 
 - alias: 'Morning lights weekend'
   trigger:
@@ -31,15 +48,29 @@
         - sat
         - sun
   action:
-    - service: switch.turn_on
+    - service: light.turn_on
       data:
-        entity_id: switch.vardagsrum
-    - service: switch.turn_on
+        entity_id: light.vardagsrum
+    - service: light.turn_on
       data:
-        entity_id: switch.spegellampa
-    - service: switch.turn_on
+        entity_id: light.spegellampa
+    - service: light.turn_on
       data:
-        entity_id: switch.fonsterlampa_kladkammare
+        entity_id: light.fonsterlampa_kladkammare
+
+- alias: 'Morning korridor lights weekend'
+  trigger:
+    - platform: time
+      at: "08:30:00"
+  condition:
+    - condition: time
+      weekday:
+        - sat
+        - sun
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.korridor
 
 - alias: 'No lights at day'
   trigger:
@@ -53,44 +84,50 @@
         - wed
         - thu
         - fri
-#    - condition: state
-#      entity_id: device_tracker.petergalaxys7
-#      state: 'not_home'
-#    - condition: state
-#      entity_id: device_tracker.carolahonor8
-#      state: 'not_home'
   action:
-    - service: switch.turn_off
+    - service: light.turn_off
       data:
-        entity_id: switch.vardagsrum
-    - service: switch.turn_off
+        entity_id: light.vardagsrum
+    - service: light.turn_off
       data:
-        entity_id: switch.spegellampa
-    - service: switch.turn_off
+        entity_id: light.spegellampa
+    - service: light.turn_off
       data:
-        entity_id: switch.fonsterlampa_kladkammare
+        entity_id: light.fonsterlampa_kladkammare
+    - service: light.turn_off
+      data:
+        entity_id: light.korridor
 
-- alias: 'Evening lights'
-#  trigger:
-#    - platform: time
-#      at: "16:30:00"
+- alias: 'Evening sunset lights'
   trigger:
     platform: sun
-    # Possible values: sunset, sunrise
     event: sunset
   action:
-    - service: switch.turn_on
+    - service: light.turn_on
       data:
-        entity_id: switch.telldus_tzwp100_plugin_switch_switch
-    - service: switch.turn_on
+        entity_id: light.sovrumslampa
+    - service: light.turn_on
       data:
-        entity_id: switch.vardagsrum
-    - service: switch.turn_on
+        entity_id: light.vardagsrum
+    - service: light.turn_on
       data:
-        entity_id: switch.spegellampa
-    - service: switch.turn_on
+        entity_id: light.spegellampa
+    - service: light.turn_on
       data:
-        entity_id: switch.fonsterlampa_kladkammare
+        entity_id: light.fonsterlampa_kladkammare
+    - service: light.turn_on
+      data:
+        entity_id: light.korridor
+
+- alias: 'Turn off korridor at night'
+  trigger:
+    - platform: time
+      at: "21:30:00"
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: light.korridor
+
 
 #- alias: 'Outside back lights on'
 #  trigger:
