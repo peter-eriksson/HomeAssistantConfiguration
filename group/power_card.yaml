@@ -9,6 +9,8 @@ power_card:
 #    - sensor.torktumlare_current
     - sensor.torktumlare_energy
     - sensor.torktumlare_power
+    - sensor.tv_energy
+    - sensor.tv_power
 #    - sensor.torktumlare_previous_reading
 #    - sensor.torktumlare_voltage
     - sensor.livingroom_roof_dimmer_energy
