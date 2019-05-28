@@ -78,7 +78,7 @@
 - alias: 'No lights at day'
   trigger:
     - platform: time
-      at: "08:30:00"
+      at: "08:10:00"
   condition:
     - condition: time
       weekday:
@@ -108,12 +108,9 @@
   trigger:
     - platform: time
       at: "18:30:00"
-#    platform: sun
-#    event: sunset
+    - platform: sun
+      event: sunset
   action:
-    - service: light.turn_on
-      data:
-        entity_id: light.sovrumslampa
     - service: light.turn_on
       data:
         entity_id: light.vardagsrum
@@ -122,10 +119,19 @@
         entity_id: light.spegellampa
     - service: light.turn_on
       data:
-        entity_id: light.fonsterlampa_kladkammare
+        entity_id: light.korridor
+
+- alias: 'Evening sunset bedroom lights'
+  trigger:
+    - platform: time
+      at: "20:00:00"
+  action:
     - service: light.turn_on
       data:
-        entity_id: light.korridor
+        entity_id: light.sovrumslampa
+    - service: light.turn_on
+      data:
+        entity_id: light.fonsterlampa_kladkammare
 
 - alias: 'Turn off korridor at night'
   trigger:
