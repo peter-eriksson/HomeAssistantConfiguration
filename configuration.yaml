@@ -31,6 +31,8 @@ logbook:
 # Track the sun
 sun:
 
+system_health:
+
 recorder:
   purge_interval: 2
   purge_keep_days: 5
@@ -44,12 +46,12 @@ tellstick:
   port: [50800, 50801]
 zwave:
   usb_path: /dev/ttyACM0
-xiaomi_aqara:
-  discovery_retry: 5
-  gateways:
-    - mac: !secret xiaomi_mac
-      key: !secret xiaomi_key
-      host: 192.168.1.209
+#xiaomi_aqara:
+#  discovery_retry: 5
+#  gateways:
+#    - mac: !secret xiaomi_mac
+#      key: !secret xiaomi_key
+#      host: 192.168.1.209
 
 #tts:
 #  platform: google
