@@ -1,0 +1,3 @@
+[submodule "custom_components/nibe"]
+	path = custom_components/nibe
+	url = https://github.com/elupus/hass_nibe.git

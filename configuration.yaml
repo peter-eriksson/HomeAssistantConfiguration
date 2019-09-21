@@ -53,6 +53,14 @@ zwave:
 #      key: !secret xiaomi_key
 #      host: 192.168.1.209
 
+nibe:
+#  systems:
+#    - system: 77687
+#      units:
+#        - unit: 0
+#      climates: True
+#      water_heaters: True
+
 #tts:
 #  platform: google
 
