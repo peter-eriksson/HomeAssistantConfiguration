@@ -82,6 +82,9 @@ light:
     name: Vardagsrum
     entity_id: switch.vardagsrum
   - platform: switch
+    name: Trädgård
+    entity_id: switch.lampor_baksidan
+  - platform: switch
     name: Korridor
     entity_id: switch.hallway_switch
 

@@ -143,20 +143,22 @@
         entity_id: light.korridor
 
 
-#- alias: 'Outside back lights on'
-#  trigger:
+- alias: 'Yard lights on'
+  trigger:
 #    - platform: time
 #      at: "20:00:00"
-#  action:
-#    - service: switch.turn_on
-#      data:
-#        entity_id: switch.lampor_baksidan
-#
-#- alias: 'Outside back lights off'
-#  trigger:
-#    - platform: time
-#      at: "22:30:00"
-#  action:
-#    - service: switch.turn_off
-#      data:
-#        entity_id: switch.lampor_baksidan
+    - platform: sun
+      event: sunset
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.tradgard
+
+- alias: 'Yard lights off'
+  trigger:
+    - platform: time
+      at: "23:00:00"
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: light.tradgard
