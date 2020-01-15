@@ -63,8 +63,11 @@ nibe:
     - system: 77687
       units:
         - unit: 0
+          categories: True
+          statuses: True
       climates: True
       water_heaters: True
+      fans: True
 
 #tts:
 #  platform: google
