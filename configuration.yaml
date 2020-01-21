@@ -141,3 +141,19 @@ group: !include_dir_merge_named group/
 #    name: Carola home
 #    initial: on
 #    icon: mdi:cellphone-iphone
+
+binary_sensor:
+  - platform: template
+    sensors:
+      tv_livingroom_state:
+        friendly_name: "TV vardagsrum"
+        delay_off:
+          seconds: 5
+        value_template: >-
+          {{ states('sensor.tv_power')|float > 30 }}
+      dishwasher_state:
+        friendly_name: "Diskmaskin"
+        delay_off:
+          minutes: 2
+        value_template: >-
+          {{ states('sensor.diskmaskin_switch_power')|float > 2 }}
