@@ -22,6 +22,7 @@ http:
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
   base_url: !secret base_url
+  server_port: 443
 
 
 # Checks for available updates
