@@ -23,28 +23,15 @@
     - service: light.turn_on
       data:
         entity_id: light.sovrumslampa
-
-- alias: 'Morning korridor lights weekday'
-  trigger:
-    - platform: time
-      at: "07:05:00"
-  condition:
-    - condition: time
-      weekday:
-        - mon
-        - tue
-        - wed
-        - thu
-        - fri
-  action:
     - service: light.turn_on
       data:
         entity_id: light.korridor
 
+#----------
 - alias: 'Morning lights weekend'
   trigger:
     - platform: time
-      at: "08:00:00"
+      at: "08:30:00"
   condition:
     - condition: time
       weekday:
@@ -60,21 +47,11 @@
     - service: light.turn_on
       data:
         entity_id: light.fonsterlampa_kladkammare
-
-- alias: 'Morning korridor lights weekend'
-  trigger:
-    - platform: time
-      at: "08:30:00"
-  condition:
-    - condition: time
-      weekday:
-        - sat
-        - sun
-  action:
     - service: light.turn_on
       data:
         entity_id: light.korridor
 
+#----------
 - alias: 'No lights at day'
   trigger:
     - platform: time
@@ -104,10 +81,11 @@
       data:
         entity_id: light.sovrumslampa
 
-- alias: 'Evening sunset lights'
+#----------
+- alias: 'Afternoon lights'
   trigger:
     - platform: time
-      at: "18:30:00"
+      at: "16:00:00"
 #    - platform: sun
 #      event: sunset
   action:
@@ -120,8 +98,12 @@
     - service: light.turn_on
       data:
         entity_id: light.korridor
+    - service: switch.turn_on
+      data:
+        entity_id: switch.vardagsrum_tv_lampa
 
-- alias: 'Evening sunset bedroom lights'
+#----------
+- alias: 'Evening bedroom lights'
   trigger:
     - platform: time
       at: "20:00:00"
@@ -133,6 +115,44 @@
       data:
         entity_id: light.fonsterlampa_kladkammare
 
+#----------
+- alias: 'Evening Carola bed light'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.tv_livingroom_state
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: sensor.battery_state
+      state: 'discharging'
+    - condition: time
+      after: '21:00:00'
+  action:
+    - service: light.turn_on
+      data:
+        brightness_pct: 20
+        entity_id: light.bedroom_peter
+
+#----------
+- alias: 'Evening Peter bed light'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.tv_livingroom_state
+      to: 'off'
+  condition:
+    - condition: state
+      # Kollar Carloas telefon
+      entity_id: sensor.battery_state
+      state: 'discharging'
+    - condition: time
+      after: '21:00:00'
+  action:
+    - service: light.turn_on
+      data:
+        brightness_pct: 20
+        entity_id: light.sovrum_peter
+
+#----------
 - alias: 'Turn off korridor at night'
   trigger:
     - platform: time
@@ -142,11 +162,9 @@
       data:
         entity_id: light.korridor
 
-
+#----------
 - alias: 'Yard lights on'
   trigger:
-#    - platform: time
-#      at: "20:00:00"
     - platform: sun
       event: sunset
   action:
@@ -154,10 +172,11 @@
       data:
         entity_id: light.tradgard
 
+#----------
 - alias: 'Yard lights off'
   trigger:
     - platform: time
-      at: "23:00:00"
+      at: "23:50:00"
   action:
     - service: light.turn_off
       data:

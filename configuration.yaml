@@ -123,7 +123,8 @@ light:
 #    icon: mdi:home
 #    radius: 100
 
-automation: !include_dir_merge_list automation
+automation: !include automations.yaml
+automation old: !include_dir_merge_list automation
 #group: !include_dir_merge_named group/
 
 #notify:
