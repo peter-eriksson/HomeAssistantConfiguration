@@ -5,6 +5,8 @@ homeassistant:
   elevation: !secret elevation
   unit_system: metric
   time_zone: Europe/Stockholm
+  external_url: https://k33.duckdns.org
+  internal_url: https://k33.duckdns.org
 #  customize: !include_dir_merge_named customize
 #  packages: !include_dir_named packages
   auth_providers:
