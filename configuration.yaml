@@ -20,7 +20,7 @@ mobile_app:
 http:
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
-  base_url: !secret base_url
+#  base_url: !secret base_url # deprecated
   server_port: 443
 
 cloud:
@@ -42,7 +42,7 @@ sun:
 system_health:
 
 recorder:
-  purge_interval: 2
+#  purge_interval: 2 # deprecated
   purge_keep_days: 5
 
 ########################################
