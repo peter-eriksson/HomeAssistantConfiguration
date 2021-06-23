@@ -2,25 +2,18 @@ homeassistant:
   name: Home
   latitude: !secret home_lat
   longitude: !secret home_long
-  elevation: !secret elevation
+  elevation: 55
   unit_system: metric
   time_zone: Europe/Stockholm
-  external_url: https://k33.duckdns.org
-  internal_url: https://k33.duckdns.org
-#  customize: !include_dir_merge_named customize
-#  packages: !include_dir_named packages
-  auth_providers:
-    - type: homeassistant
-#    - type: legacy_api_password
-#      api_password: !secret http_password
+  external_url: "https://k33.duckdns.org"
+  internal_url: "https://k33.duckdns.org"
 
 frontend:
 config:
 mobile_app:
 http:
-  ssl_certificate: !secret ssl_certificate
-  ssl_key: !secret ssl_key
-#  base_url: !secret base_url # deprecated
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
   server_port: 443
 
 cloud:
@@ -42,25 +35,16 @@ sun:
 system_health:
 
 recorder:
-#  purge_interval: 2 # deprecated
   purge_keep_days: 5
 
-########################################
-###               HUBS               ###
-########################################
-
+# Hubs
 tellstick:
   host: core-tellstick
   port: [50800, 50801]
 zwave:
   usb_path: /dev/ttyACM0
-#xiaomi_aqara:
-#  discovery_retry: 5
-#  gateways:
-#    - mac: !secret xiaomi_mac
-#      key: !secret xiaomi_key
-#      host: 192.168.1.209
 
+# Nibe F370
 nibe:
   systems:
     - system: 77687
@@ -72,11 +56,11 @@ nibe:
       water_heaters: True
       fans: True
 
-#tts:
-#  platform: google
-
 sensor: !include_dir_merge_list sensor
-switch: !include_dir_merge_list switch
+
+switch:
+  - platform: tellstick
+
 light:
   - platform: switch
     name: Fönsterlampa klädkammare
@@ -97,52 +81,8 @@ light:
     name: Korridor
     entity_id: switch.hallway_switch
 
-#device_tracker:
-#  - platform: nmap_tracker
-#    hosts: !secret nmap_tracker_hosts
-#    track_new_devices: false
-#    interval_seconds: 20
-#    consider_home: 20
-#    home_interval: 10
-#    exclude:
-#      - !secret hass_wlan_ip
-#  - platform: owntracks_http
-
-#zone:
-#  - name: Carola School
-#    latitude: !secret carola_school_lat
-#    longitude: !secret carola_school_long
-#    icon: mdi:school
-#    radius: 200
-#  - name: Peter Work
-#    latitude: !secret work_lat
-#    longitude: !secret work_long
-#    icon: mdi:briefcase
-#    radius: 300
-#  - name: Home
-#    latitude: !secret home_lat
-#    longitude: !secret home_long
-#    icon: mdi:home
-#    radius: 100
-
 automation: !include automations.yaml
 automation old: !include_dir_merge_list automation
-#group: !include_dir_merge_named group/
-
-#notify:
-#  - name: Pushbullet Peter
-#    platform: pushbullet
-#    api_key: !secret pushbullet_key_peter
-
-#input_boolean:
-#  peter_home:
-#    name: Peter home
-#    initial: on
-#    icon: mdi:cellphone-iphone
-#  carola_home:
-#    name: Carola home
-#    initial: on
-#    icon: mdi:cellphone-iphone
 
 binary_sensor:
   - platform: template

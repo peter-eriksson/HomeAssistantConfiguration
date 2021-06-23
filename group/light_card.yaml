@@ -1,9 +1,0 @@
-light_card:
-  name: Ljus
-  entities:
-    - light.livingroom_roof_dimmer_level
-    - light.korridor
-    - light.spegellampa
-    - light.vardagsrum
-    - light.fonsterlampa_kladkammare
-    - light.sovrumslampa
