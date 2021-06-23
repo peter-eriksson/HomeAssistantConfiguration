@@ -45,16 +45,16 @@ zwave:
   usb_path: /dev/ttyACM0
 
 # Nibe F370
-nibe:
-  systems:
-    - system: 77687
-      units:
-        - unit: 0
-          categories: True
-          statuses: True
-      climates: True
-      water_heaters: True
-      fans: True
+#nibe:
+#  systems:
+#    - system: 77687
+#      units:
+#        - unit: 0
+#          categories: True
+#          statuses: True
+#      climates: True
+#      water_heaters: True
+#      fans: True
 
 sensor: !include_dir_merge_list sensor
 
