@@ -81,7 +81,6 @@ light:
     entity_id: switch.hallway_switch
 
 automation: !include automations.yaml
-automation old: !include_dir_merge_list automation
 
 binary_sensor:
   - platform: template
