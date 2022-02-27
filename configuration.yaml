@@ -97,3 +97,29 @@ binary_sensor:
           minutes: 2
         value_template: >-
           {{ states('sensor.diskmaskin_switch_power')|float > 2 }}
+
+influxdb:
+  api_version: 2
+  ssl: false
+  host: metrics.local
+  port: 8086
+  token: lKDiEHCAs0acHTPSBVwXBp93nG9KKWCOCrdJd5Yp78vCeeYPE7nkYVV0uoxD869qhIMib6Xb9g3zlhd8X8BKOA==
+  organization: 249466701622a2ea
+  bucket: home_assistant
+  tags:
+    source: HA
+  tags_attributes:
+    - friendly_name
+  default_measurement: units
+#  exclude:
+#    entities:
+#      - zone.home
+#    domains:
+#      - persistent_notification
+#      - person
+  include:
+#    domains:
+#      - sensor
+    entities:
+      - sensor.diskmaskin_switch_power
+      - sensor.diskmaskin_switch_energy
