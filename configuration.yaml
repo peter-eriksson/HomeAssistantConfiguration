@@ -123,3 +123,5 @@ influxdb:
     entities:
       - sensor.diskmaskin_switch_power
       - sensor.diskmaskin_switch_energy
+      - sensor.tv_energy
+      - sensor.tv_power
