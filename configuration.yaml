@@ -101,7 +101,7 @@ binary_sensor:
 influxdb:
   api_version: 2
   ssl: false
-  host: metrics.local
+  host: 192.168.1.111
   port: 8086
   token: lKDiEHCAs0acHTPSBVwXBp93nG9KKWCOCrdJd5Yp78vCeeYPE7nkYVV0uoxD869qhIMib6Xb9g3zlhd8X8BKOA==
   organization: 249466701622a2ea
