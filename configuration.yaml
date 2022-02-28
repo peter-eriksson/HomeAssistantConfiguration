@@ -8,6 +8,16 @@ homeassistant:
   external_url: "https://k33.duckdns.org"
   internal_url: "https://k33.duckdns.org"
 
+  customize:
+    sensor.tv_energy:
+      device_class: energy
+    sensor.tv_power:
+      device_class: power
+    sensor.diskmaskin_switch_energy:
+      device_class: energy
+    sensor.diskmaskin_switch_power:
+      device_class: power
+
 frontend:
 config:
 mobile_app:
