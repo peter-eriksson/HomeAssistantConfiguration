@@ -133,17 +133,13 @@ influxdb:
   tags_attributes:
     - friendly_name
   default_measurement: units
-#  exclude:
-#    entities:
-#      - zone.home
-#    domains:
-#      - persistent_notification
-#      - person
   include:
-#    domains:
-#      - sensor
     entities:
       - sensor.diskmaskin_switch_power
       - sensor.diskmaskin_switch_energy
       - sensor.tv_energy
       - sensor.tv_power
+      - sensor.tvattmaskin_power
+      - sensor.tvattmaskin_energy
+      - sensor.torktumlare_power
+      - sensor.torktumlare_energy
